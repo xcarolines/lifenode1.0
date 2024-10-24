@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Traveler by freehtml5.co
-	Twitter: http://twitter.com/fh5co
-	URL: http://freehtml5.co
--->
+
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -65,33 +61,31 @@
 
 	
 	<!-- <div class="page-inner"> -->
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Traveler <em>.</em></a></div>
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div id="gtco-logo"><a href="index.html">LifeNode <em>.</em></a></div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul>
+							<li><a href="destination.html">Costos</a></li>
+							<li class="has-dropdown">
+								<a href="#">Seguros</a>
+								<ul class="dropdown">
+									<li><a href="#">Salud</a></li>
+									<li><a href="#">Catástrofes</a></li>
+								</ul>
+							</li>
+							<li><a href="pricing.html">Acerca de</a></li>
+							<li><a href="contact.html">Registrarse</a></li>
+						</ul>	
+					</div>
 				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li><a href="destination.html">Destination</a></li>
-						<li class="has-dropdown">
-							<a href="#">Travel</a>
-							<ul class="dropdown">
-								<li><a href="#">Europe</a></li>
-								<li><a href="#">Asia</a></li>
-								<li><a href="#">America</a></li>
-								<li><a href="#">Canada</a></li>
-							</ul>
-						</li>
-						<li><a href="pricing.html">Pricing</a></li>
-						<li class="active"><a href="contact.html">Contact</a></li>
-					</ul>	
-				</div>
+				
 			</div>
-			
-		</div>
-	</nav>
+		</nav>
 	
 	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/img_bg_3.jpg)">
 		<div class="overlay"></div>
@@ -101,10 +95,10 @@
 					<div class="row row-mt-15em">
 
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<span class="intro-text-small">Don't be shy</span>
-							<h1>Get In Touch</h1>	
+							<span class="intro-text-small">Seguro paramétrico digital</span>
+							<h1>Registro</h1>	
 						</div>
-						
+
 					</div>
 					
 				</div>
@@ -118,38 +112,45 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
-					<h3>Get In Touch</h3>
-					<form action="#">
+					<h3>Registrate ahora</h3>
+					<form action="procesar_registro.php" method="POST">
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
-							</div>
-							
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="email">Email</label>
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<label for="name">Nombre Completo</label>
+								<input type="text" id="name" name="name" class="form-control" placeholder="Ingresa tu nombre completo" required>
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="subject">Subject</label>
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<label for="email">Correo Electrónico</label>
+								<input type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="message">Message</label>
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write us something"></textarea>
+								<label for="phone">Teléfono</label>
+								<input type="tel" id="phone" name="phone" class="form-control" placeholder="Ingresa tu número de teléfono" required>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="policy">Tipo de Seguro</label>
+								<select id="policy" name="policy" class="form-control" required>
+									<option value="vida">Salud</option>
+									<option value="hogar">Catástrofes</option>
+								</select>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="message">Comentarios Adicionales</label>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escribe algún comentario adicional"></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
+							<input type="submit" value="Registrarse" class="btn btn-primary">
 						</div>
 
 					</form>		
